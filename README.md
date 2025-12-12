@@ -4,7 +4,7 @@ Git Repo: [https://github.com/daniel-riffi/ma-saap-ex03.git](https://github.com/
 
 ## Architecture Patterns
 
-We compare two architecture patterns by implementing the same simple application using both approaches. We therefore implement a layered (N-Tier) architecture and a strict MVC architecture.
+We compare two architecture patterns by implementing the same simple application using both approaches. We therefore implement a layered (N-Tier) architecture and a one-layer (kind of MVC) architecture.
 
 ### Layered (N-Tier) Architecture
 
@@ -29,15 +29,14 @@ Controllers handle HTTP requests and responses, services validate and preprocess
 - Potential performance overhead due to layer interactions.
 - Requires careful design to avoid tight coupling between layers.
 
-### Strict MVC
+### One-Layer (Kind of MVC) Architecture
 
 In this architecture, we separate the application into three main components:
 
-- Model: Represents the data and business logic.
 - View: Responsible for rendering the user interface.
-- Controller: Manages user input and interacts with the model to update the view.
+- Controller: Manages user input and handles the business logic.
 
-All logic including business logic and data access is handled within the model/controller component. This leads to a bloating of the model/controller, since it combines multiple responsibilities and layers from the layered architecture.
+All logic including business logic and data access is handled within the controller component. This leads to a bloating of the controller, since it combines multiple responsibilities and layers from the layered architecture. The view was not implemented in our example, since we only focus on the backend part of the application.
 
 **Advantages:**
 
