@@ -37,7 +37,7 @@ In this architecture, we separate the application into three main components:
 - View: Responsible for rendering the user interface.
 - Controller: Manages user input and interacts with the model to update the view.
 
-All logic including business logic and data access is handled within the model component. This leads to a bloating of the model, since it combines multiple responsibilities and layers from the layered architecture.
+All logic including business logic and data access is handled within the model/controller component. This leads to a bloating of the model/controller, since it combines multiple responsibilities and layers from the layered architecture.
 
 **Advantages:**
 
